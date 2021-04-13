@@ -1,26 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Index msg="你的名字-用诗经 楚辞 唐诗 宋词起名字"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Index from './components/Index.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Index
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+html,body, #app{
+  height: 100%;
+  width: 100%;
+  background-color:rgb(247, 248, 249);
 }
 </style>
