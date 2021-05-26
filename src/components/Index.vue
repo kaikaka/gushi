@@ -5,20 +5,17 @@
       <div>本项目全部开源</div>
       <p></p>
       <div class="book-selector">
-      <bookItem class="input-group"></bookItem>
-        <!-- <BookItem>ggggggggg</BookItem> -->
+        <div class="inputGroup"><book-item></book-item></div>
       </div>
     </div>
   </div>
 </template>
 <script>
-
-import BookItem from "./BookItem"
+import BookItem from './BookItem.vue'
 
 export default {
-  component:  {
-    BookItem
-  }
+  components: { BookItem },
+  name:'Index'
 }
 </script>
 <style>
@@ -44,13 +41,11 @@ export default {
     width: 100%;
     height: 400px;
   }
-  .input-group {
-    /* box-sizing: border-box;
-    width: 45px;
-    height: 80px;
-    display: inline-block;
+  .inputGroup {
+    box-sizing: border-box;
+    width: 90%;
+    height: 40px;
     background-color: #fff;
     margin: 8px;
-    position: relative; */
   }
 </style>
