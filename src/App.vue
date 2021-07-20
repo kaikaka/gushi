@@ -20,8 +20,8 @@ export default {
   justify-content: center;
 }
 html,body, #app{
-  height: 100%;
-  width: 100%;
+  height: 1334px;
+  width: 750px;
   background-color:rgb(247, 248, 249);
 }
 </style>

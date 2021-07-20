@@ -4,26 +4,52 @@
       <h3 class="title">你的名字 <small>古诗文起名V1.0</small></h3>
       <div>本项目全部开源</div>
       <p></p>
-      <div class="book-selector">
-        <div class="inputGroup"><book-item></book-item></div>
-      </div>
+      <van-radio-group v-model="checked">
+        <van-cell-group>
+        <van-cell title="单选框 1" clickable @click="checked = '1'">
+          <template #right-icon>
+            <van-radio name="1" />
+          </template>
+        </van-cell>
+        <van-cell title="单选框 2" clickable @click="checked = '2'">
+          <template #right-icon>
+            <van-radio name="2" class="van-radio__icon"/>
+          </template>
+        </van-cell>
+      </van-cell-group>
+    </van-radio-group>
     </div>
   </div>
 </template>
 <script>
-import BookItem from './BookItem.vue'
 
 export default {
-  components: { BookItem },
-  name:'Index'
+  name:'Index',
+  methods:{
+    chenradio1() {
+    this.radio = "1";
+    console.log("我触发了点击事件一");
+    },
+    chenradio2() {
+    this.radio = "2";
+    console.log("我触发了点击事件2");
+    }
+  },
+  data() {
+    return {
+      radio: '1'
+    }
+  }
+  
 }
 </script>
 <style>
   .background {
     width: 60%;
-    max-width: 800px;
+    max-width: 750px;
     margin: 0;
     text-align: left;
+    background-color:rgb(222, 226, 230);
   }
   h3 {
     display: block;
@@ -34,18 +60,11 @@ export default {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
   }
-
-  .book-selector {
-    padding: 1rem;
-    margin: 0;
-    width: 100%;
-    height: 400px;
-  }
-  .inputGroup {
-    box-sizing: border-box;
-    width: 90%;
-    height: 40px;
-    background-color: #fff;
-    margin: 8px;
-  }
+  .van-radio__icon {
+      top: 50%;
+      left: 10px;
+      z-index: 1;
+      position: absolute;
+      margin-top: -10px;
+    }
 </style>
