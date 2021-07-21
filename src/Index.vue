@@ -60,9 +60,9 @@
         <van-col span="200">{{item.sentence}}</van-col>
         <van-col span="50">[{{item.dynasty}}]{{item.author}}</van-col>
       </van-row>
-        
     </van-cell>
     </van-list>
+    <p></p>
     </div>
   </div>
 </template>
