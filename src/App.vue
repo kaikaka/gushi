@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Index from './components/Index.vue'
+import Index from './Index.vue'
 
 export default {
   name: 'App',
@@ -20,8 +20,6 @@ export default {
   justify-content: center;
 }
 html,body, #app{
-  height: 1334px;
-  width: 750px;
   background-color:rgb(247, 248, 249);
 }
 </style>
